@@ -2,6 +2,7 @@
 
 vagrant scripts for kubernetes
 
+https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/getting-started-guides/fedora/fedora_manual_config.md
 http://weaveblog.com/2014/11/11/weave-for-kubernetes/
 
 setsid /usr/bin/etcd >"/tmp/etcd.log" 2>&1 &
