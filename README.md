@@ -1,5 +1,8 @@
 # vagrant-kubernetes
+
 vagrant scripts for kubernetes
+
+http://weaveblog.com/2014/11/11/weave-for-kubernetes/
 
 setsid /usr/bin/etcd >"/tmp/etcd.log" 2>&1 &
 
