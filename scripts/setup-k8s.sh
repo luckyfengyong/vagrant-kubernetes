@@ -8,7 +8,14 @@ function setupKubernetes {
 }
 
 function installKubernetes {
-
+	echo "install kubernetes"
+	FILE=/vagrant/resources/$KUBERNETES_ARCHIVE
+	if resourceExists $KUBERNETES_ARCHIVE; then
+		echo "install kubernetes from local file"
+	else
+        curl -o $FILE -O -L $KUBERNETES_MIRROR_DOWNLOAD
+	fi
+	tar -xzf $FILE -C /usr/local
 }
 
 
