@@ -27,7 +27,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 				s.path = "scripts/setup-centos-hosts.sh"
 				s.args = "-t #{numNodes}"
 			end
-			node.vm.provision "shell", path: "scripts/setup-k8sslave.sh"
+			if i != 1
+				node.vm.provision "shell", path: "scripts/setup-k8sslave.sh"
+			end
 			if i == 1
 				node.vm.provision "shell" do |s|
 					s.path = "scripts/setup-centos-ssh.sh"
