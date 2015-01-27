@@ -19,6 +19,7 @@ function installKubernetes {
 	tar -xzf $FILE -C /usr/local
 	tar -xzf $KUBERNETES_PREFIX/server/kubernetes-server-linux-amd64.tar.gz -C $KUBERNETES_PREFIX/server
 	mv $KUBERNETES_PREFIX/server/kubernetes/server/bin $KUBERNETES_PREFIX/server
+	rm -rf $KUBERNETES_PREFIX/server/kubernetes
 }
 
 
