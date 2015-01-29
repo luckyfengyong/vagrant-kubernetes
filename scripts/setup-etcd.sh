@@ -1,0 +1,21 @@
+#!/bin/bash
+source "/vagrant/scripts/common.sh"
+
+#https://github.com/coreos/etcd/releases/
+
+function installetcd {
+	echo "install etcd"
+	FILE=/vagrant/resources/$ETCD_ARCHIVE
+	if resourceExists $ETCD_ARCHIVE; then
+		echo "install etcd from local file"
+	else
+		curl -o $FILE -O -L $ETCD_MIRROR_DOWNLOAD
+	fi
+	tar -xzf $FILE -C /usr/local
+	ln -s /usr/local/etcd-v2.0.0-linux-amd64 /usr/local/etcd
+}
+
+
+echo "setup etcd"
+installetcd
+

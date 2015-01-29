@@ -37,8 +37,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 				end
 			end
 			if i == 1
+				node.vm.provision "shell", path: "scripts/setup-etcd.sh"
 				node.vm.provision "shell", path: "scripts/setup-k8s.sh"
-			end            
+			end
 		end
 	end
 end
