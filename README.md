@@ -55,6 +55,12 @@ After you have provisioned the cluster, SSH into kubesnode1 and run the followin
 startk8s.sh
 ```
 
+And then, SSH into other nodes and run the following command.
+
+```
+startk8sslave.sh
+```
+
 # Test etcd
 Run the following command to make sure etcd works
 
