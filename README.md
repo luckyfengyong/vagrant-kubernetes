@@ -19,7 +19,7 @@ Vagrant project to spin up a cluster of 6 virtual machines with etcd v2.0.0, kub
 3. Run ```vagrant box add centos65 https://github.com/2creatives/vagrant-centos/releases/download/v6.5.3/centos65-x86_64-20140116.box```
 4. Git clone this project, and change directory (cd) into this project (directory).
 5. Run ```vagrant up``` to create the VM.
-6. Run ```vagrant ssh``` to get into your VM. The VM name in vagrant is k8snode1, k8snode2 ... k8snoden. While the ip of VMs depends on the scale of your kubernetes cluster. If it is less then 10, the IP will be 10.211.55.101, .... 10.211.55.10n. Or you could run ```ssh``` directly with ip of VMs and username/password of root/vagrant.
+6. Run ```vagrant ssh``` to get into your VM. The VM name in vagrant is k8snode1, k8snode2 ... k8snoden. While the ip of VMs depends on the scale of your kubernetes cluster. If it is less then 10, the IP will be 10.211.57.101, .... 10.211.57.10n. Or you could run ```ssh``` directly with ip of VMs and username/password of root/vagrant.
 7. Run ```vagrant destroy``` when you want to destroy and get rid of the VM.
 8. The directory of /vagrant is mounted in each VM by vagrant if you want to access host machine from VM. You could also use win-sshfs if you want to access the local file system of VM from host machine. Please refer to http://code.google.com/p/win-sshfs/ for details.
 
