@@ -10,6 +10,7 @@ ETCD_PREFIX=/usr/local/etcd
 ETCD_VERSION=v2.0.0
 ETCD_ARCHIVE=etcd-$ETCD_VERSION-linux-amd64.tar.gz
 ETCD_MIRROR_DOWNLOAD=https://github.com/coreos/etcd/releases/download/$ETCD_VERSION/$ETCD_ARCHIVE
+ETCD_RES_DIR=/vagrant/resources/etcd
 #kubernetes
 KUBERNETES_PREFIX=/usr/local/kubernetes
 KUBERNETES_VERSION=v0.9.1

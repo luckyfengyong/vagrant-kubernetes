@@ -3,6 +3,11 @@ source "/vagrant/scripts/common.sh"
 
 #https://github.com/coreos/etcd/releases/
 
+function setupetcd {
+	echo "creating etcd environment variables"
+	cp -f $ETCD_RES_DIR/etcd.sh /etc/profile.d/etcd.sh
+}
+
 function installetcd {
 	echo "install etcd"
 	FILE=/vagrant/resources/$ETCD_ARCHIVE
@@ -18,4 +23,5 @@ function installetcd {
 
 echo "setup etcd"
 installetcd
+setupetcd
 

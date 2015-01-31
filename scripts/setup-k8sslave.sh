@@ -6,6 +6,7 @@ source "/vagrant/scripts/common.sh"
 function setupKubernetes {
 	echo "creating kubernetes environment variables"
 	cp -f $KUBERNETES_RES_DIR/kubernetes.sh /etc/profile.d/kubernetes.sh
+	cp -f $KUBERNETES_RES_DIR/startk8sslave.sh $KUBERNETES_PREFIX/server/bin/startk8sslave.sh
 }
 
 function installKubernetes {
@@ -21,7 +22,6 @@ function installKubernetes {
 	mv $KUBERNETES_PREFIX/server/kubernetes/server/bin $KUBERNETES_PREFIX/server
 	rm -rf $KUBERNETES_PREFIX/server/kubernetes
 }
-
 
 echo "setup Kubernetes"
 installKubernetes
